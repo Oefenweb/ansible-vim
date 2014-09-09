@@ -1,0 +1,6 @@
+---
+# test file for vim
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ansible-vim

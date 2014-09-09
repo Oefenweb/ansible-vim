@@ -1,0 +1,17 @@
+---
+# tasks file for vim
+- name: install
+  apt:
+    name: vim
+    state: latest
+  tags: [configuration, vim, vim-install]
+
+- name: create configuration file
+  template:
+    src: etc/vim/vimrc.local.j2
+    dest: "{{ item }}/.vimrc"
+    owner: root
+    group: root
+    mode: 0644
+  with_items: vim_vimrc_destinations
+  tags: [configuration, vim, vim-configuration]

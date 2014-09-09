@@ -1,0 +1,7 @@
+{% for vim_set in vim_sets %}
+{% if vim_set.value is none %}
+set {{ vim_set.key }}
+{% else %}
+set {{ vim_set.key }}={{ vim_set.value }}
+{% endif %}
+{% endfor %}

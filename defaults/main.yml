@@ -1,0 +1,21 @@
+---
+# defaults file for vim
+vim_vimrc_destinations:
+  # new users
+  - /etc/skel
+  # current user
+  - "{{ ansible_env.HOME }}"
+
+vim_sets:
+  - key: number
+    value: null
+  - key: autoindent
+    value: null
+  - key: expandtab
+    value: null
+  - key: softtabstop
+    value: 2
+  - key: shiftwidth
+    value: 2
+  - key: pastetoggle
+    value: <F2>
