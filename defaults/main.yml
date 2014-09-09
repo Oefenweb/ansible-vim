@@ -7,8 +7,11 @@ vim_vimrc_destinations:
   - "{{ ansible_env.HOME }}"
 
 vim_sets:
+  # Display line numbers
   - key: number
     value: null
+
+  # Text, tab and indent related
   - key: autoindent
     value: null
   - key: expandtab
@@ -17,5 +20,27 @@ vim_sets:
     value: 2
   - key: shiftwidth
     value: 2
+
+  # See http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
   - key: pastetoggle
     value: <F2>
+
+  # Set to auto read when a file is changed from the outside
+  - key: autoread
+    value: null
+
+  # Set utf8 as standard encoding
+  - key: encoding
+    value: utf8
+
+  # Use Unix as the standard file type
+  - key: ffs
+    value: unix,dos,mac
+
+  # Turn backup off
+  - key: nobackup
+    value: null
+  - key: nowb
+    value: null
+  - key: noswapfile
+    value: null
