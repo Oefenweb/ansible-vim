@@ -1,10 +1,10 @@
 ---
 # defaults file for vim
 vim_vimrc_destinations:
-  # new users
-  - /etc/skel
-  # current user
-  - "{{ ansible_env.HOME }}"
+  skell:
+    dest: /etc/skel
+  current:
+    dest: "{{ ansible_env.HOME }}"
 
 vim_sets:
   # Display line numbers
