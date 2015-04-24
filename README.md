@@ -10,7 +10,7 @@ None
 
 #### Variables
 
-* `vim_vimrc_destinations`: [default: `[/etc/skel, {{ ansible_env.HOME }}]`]: Destinations to copy the vimrc file to
+* `vim_vimrc_destinations`: [default: `{skell: dest: /etc/skel, current: dest: "{{ ansible_env.HOME }}"}`]: Destinations to copy the vimrc file to
 * `vim_sets`: [default: see `defaults/main.yml`]: Set commands
 
 ## Dependencies

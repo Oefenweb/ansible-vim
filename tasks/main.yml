@@ -4,14 +4,16 @@
   apt:
     name: vim
     state: latest
+    update_cache: true
+    cache_valid_time: 3600
   tags: [configuration, vim, vim-install]
 
 - name: create configuration file
   template:
     src: etc/vim/vimrc.local.j2
-    dest: "{{ item }}/.vimrc"
-    owner: root
-    group: root
-    mode: 0644
-  with_items: vim_vimrc_destinations
+    dest: "{{ item.value.dest }}/.vimrc"
+    owner: "{{ item.value.owner | default('root') }}"
+    group: "{{ item.value.group | default('root') }}"
+    mode: "{{ item.value.mode | default('0644') }}"
+  with_dict: vim_vimrc_destinations
   tags: [configuration, vim, vim-configuration]
