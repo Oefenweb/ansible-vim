@@ -1,5 +1,5 @@
----
 # defaults file for vim
+---
 vim_vimrc_destinations:
   skell:
     dest: /etc/skel
