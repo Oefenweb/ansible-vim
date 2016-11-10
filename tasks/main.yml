@@ -3,10 +3,13 @@
 - name: install
   apt:
     name: vim
-    state: latest
+    state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  tags: [configuration, vim, vim-install]
+  tags:
+    - configuration
+    - vim
+    - vim-install
 
 - name: create configuration file
   template:
@@ -15,5 +18,8 @@
     owner: "{{ item.value.owner | default('root') }}"
     group: "{{ item.value.group | default(item.value.owner) | default('root') }}"
     mode: "{{ item.value.mode | default('0644') }}"
-  with_dict: vim_vimrc_destinations
-  tags: [configuration, vim, vim-configuration]
+  with_dict: "{{ vim_vimrc_destinations }}"
+  tags:
+    - configuration
+    - vim
+    - vim-configuration
