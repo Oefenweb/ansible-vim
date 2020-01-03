@@ -18,6 +18,8 @@ None
 * `vim_vimrc_destinations.key.mode`: The mode of the file, such as 0644 (optional, default `0644`)
 
 * `vim_sets`: [default: see `defaults/main.yml`]: Set commands
+* `vim_parms`: [default: see `defaults/main.yml]: Set parameters of vim. Ex. syntax on
+
 
 ## Dependencies
 
