@@ -1,6 +1,7 @@
-# meta file for vim
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: vim
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

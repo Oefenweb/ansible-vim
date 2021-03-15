@@ -1,4 +1,4 @@
-# vars file for vim
+# vars file
 ---
 vim_dependencies:
   - vim

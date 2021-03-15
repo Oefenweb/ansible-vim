@@ -1,4 +1,4 @@
-# tasks file for vim
+# tasks file
 ---
 - name: install
   apt:
