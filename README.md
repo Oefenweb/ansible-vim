@@ -1,6 +1,6 @@
 ## vim
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-vim.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-vim)
+[![CI](https://github.com/Oefenweb/ansible-vim/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-vim/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-vim-blue.svg)](https://galaxy.ansible.com/Oefenweb/vim)
 
 Set up vim in Debian-like systems.
