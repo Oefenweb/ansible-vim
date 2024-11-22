@@ -44,3 +44,11 @@ vim_sets:
     value: null
   - key: noswapfile
     value: null
+    
+# usage: parm = parameter; 
+# value = value of parameter. If blank set value: null; 
+# If value eq text set value over quotes ex. value: "on"
+vim_parms:
+  - parm: syntax
+    value: "on"
+
