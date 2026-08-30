@@ -7,3 +7,11 @@ set {{ vim_set.key }}
 set {{ vim_set.key }}={{ vim_set.value }}
 {% endif %}
 {% endfor %}
+
+{% for vim_parm in vim_parms %}
+{% if vim_parm.value is none %}
+{{ vim_parm.parm }}
+{% else %}
+{{ vim_parm.parm }} {{ vim_parm.value }}
+{% endif %}
+{% endfor %}
